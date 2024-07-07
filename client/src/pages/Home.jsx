@@ -14,15 +14,21 @@ const Home = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("jobs.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setJobs(data);
-        setIsLoading(false);
-      });
+    // fetch("jobs.json")
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     setJobs(data);
+    //     setIsLoading(false);
+    //   });
+    fetch("http://localhost:5000/all-jobs")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      setJobs(data);
+      setIsLoading(false);
+    });
   }, []);
-  //console.log(jobs);
 
   const [query, setQuery] = useState("");
   const handleInputChange = (event) => {
