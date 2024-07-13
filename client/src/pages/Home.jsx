@@ -22,12 +22,12 @@ const Home = () => {
     //     setIsLoading(false);
     //   });
     fetch("http://localhost:5000/all-jobs")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      setJobs(data);
-      setIsLoading(false);
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setJobs(data);
+        setIsLoading(false);
+      });
   }, []);
 
   const [query, setQuery] = useState("");

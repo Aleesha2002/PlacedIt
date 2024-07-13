@@ -8,7 +8,7 @@ const MyJob = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:5000/myJobs/shikha@gmail.com`)
+    fetch(`http://localhost:5000/myJobs/tnp@iiitm.ac.in`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);

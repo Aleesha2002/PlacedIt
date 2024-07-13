@@ -23,8 +23,8 @@ const PostJob = () => {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
-        if(result.acknowledged===true){
-          alert("Job Posted Successfully!!!")
+        if (result.acknowledged === true) {
+          alert("Job Posted Successfully!!!");
         }
         reset();
       });
@@ -217,7 +217,7 @@ const PostJob = () => {
             <label className="block mb-2 text-lg">Job Posted By</label>
             <input
               type="email"
-              placeholder="your email"
+              value="tnp@iiitm.ac.in"
               {...register("postedBy")}
               className="create-job-input"
             />
