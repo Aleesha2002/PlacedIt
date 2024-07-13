@@ -11,16 +11,16 @@ const JobDetails = () => {
       .then((data) => setJob(data));
   }, []);
 
-  const handleApply=async()=>{
-    const {value:url}=await Swal.fire({
-        input:"url",
-        inputLabel:"URL address",
-        inputPlaceholder:"Enter the URL"
+  const handleApply = async () => {
+    const { value: url } = await Swal.fire({
+      input: "url",
+      inputLabel: "URL address",
+      inputPlaceholder: "Enter the URL",
     });
-    if(url){
-        Swal.fire(`Entered URL:${url}`);
+    if (url) {
+      Swal.fire(`Entered URL:${url}`);
     }
-  }
+  };
 
   return (
     <div className="max-w-screen-2xl container mx-auto xl:px-24 px-4 ">

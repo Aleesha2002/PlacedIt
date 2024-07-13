@@ -21,7 +21,10 @@ const Card = ({ data }) => {
 
   return (
     <section className="card">
-      <Link to={`/job/${_id}`} className="flex gap-4 flex-col sm:flex-row items-start ">
+      <Link
+        to={`/job/${_id}`}
+        className="flex gap-4 flex-col sm:flex-row items-start "
+      >
         <img src={companyLogo} alt="" className="w-20 h-20 rounded-sm" />
         <div className="">
           <h4 className="text-primary mb-1">{companyName} </h4>
